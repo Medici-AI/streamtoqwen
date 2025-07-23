@@ -1,249 +1,211 @@
 # RM Conversation Streamer with Flink & Quen Integration
 
-A lightweight, local-only Python application that simulates streaming conversations between relationship managers (RMs) and customers through Apache Flink-like processing, applies session-based windowing logic, and generates AI responses using a local Quen 32B model via Ollama.
+A real-time streaming conversation analysis system that simulates Apache Flink windowing for relationship manager (RM) and customer conversations, with AI-powered strategic advice using the Quen local language model.
 
-## 🎯 Key Features
+## 🚀 Features
 
-- **Local-only operation** - No cloud services or distributed clusters required
-- **Session-based streaming** - Simulates Flink's `keyBy(session_id)` for concurrent conversation handling
-- **Event-time windowing** - Tumbling windows aggregate conversation context
-- **Quen AI integration** - Local Quen 32B model responses via Ollama
-- **Real-time simulation** - Configurable speed factors for prototyping
-- **Global workspace output** - Console output simulates agentic memory entries
-- **Simplified architecture** - Works without complex Flink setup
+- **True Streaming Processing**: Character/word-level streaming with cumulative session buffers
+- **Apache Flink Simulation**: Session-based windowing with configurable window sizes (including sub-second)
+- **Local AI Integration**: Quen 32B model via Ollama for strategic RM advice
+- **Cognitive Analysis**: Real-time conversation analysis with intent, strategy, urgency, and emotion detection
+- **Multi-Session Support**: Parallel processing of multiple conversation sessions
+- **Rich Visual Output**: Color-coded terminal output with conversation windows and analysis
+- **Configurable Streaming**: Adjustable speed factors and chunk types (character/word/sentence)
 
-## 🏗️ Architecture
+## 📋 Requirements
 
-```
-messages.jsonl → Simple Stream Processor → keyBy(session_id) → Tumbling Windows → Quen Model → Console Output
-```
+- Python 3.8+
+- Ollama (for local Quen model)
+- Internet connection (for initial Ollama setup)
 
-### Components
+## 🛠️ Installation
 
-- **`main.py`** - Entry point and orchestration
-- **`stream_processor_simple.py`** - Simplified streaming logic with session-based windowing
-- **`quen_client.py`** - Communication with local Quen model via Ollama
-- **`models.py`** - Data classes for events and responses
-- **`messages.jsonl`** - Sample conversation data with interleaved sessions
-- **`test_app.py`** - Component testing script
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-1. **Python 3.8+**
-2. **Ollama** (optional, for real Quen responses)
+1. **Clone the repository**:
    ```bash
-   # Install Ollama
-   curl -fsSL https://ollama.ai/install.sh | sh
-   
-   # Pull Quen model
-   ollama pull quen:32b
-   
-   # Start Ollama service
-   ollama serve
+   git clone <repository-url>
+   cd streamllm
    ```
 
-### Installation
-
-1. **Clone and setup**
+2. **Create a virtual environment**:
    ```bash
-   git clone <repository>
-   cd streamllm
-   
-   # Create virtual environment
-   python3 -m venv venv
-   source venv/bin/activate
-   
-   # Install dependencies
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install dependencies**:
+   ```bash
    pip install -r requirements.txt
    ```
 
-2. **Run the application**
-   ```bash
-   python main.py
-   ```
+4. **Install Ollama**:
+   - Visit [https://ollama.ai/](https://ollama.ai/) and follow installation instructions
+   - Pull the Quen model:
+     ```bash
+     ollama pull qwen2.5:32b
+     ```
 
-### Usage Examples
+## 🎯 Usage
+
+### Basic Usage
 
 ```bash
-# Basic usage with defaults
+# Run with default settings (30-second windows, 2x speed)
 python main.py
 
-# Custom input file
+# Use custom input file
 python main.py --input-file my_conversations.jsonl
 
-# 60-second windows, real-time speed
+# Adjust window size and speed
 python main.py --window-size 60 --speed-factor 1.0
-
-# Fast demo mode
-python main.py --speed-factor 10.0 --window-size 15
-
-# Debug logging
-python main.py --log-level DEBUG
 ```
 
-## 📊 Input Format
+### Advanced Usage
 
-The application reads JSONL files with conversation messages:
+```bash
+# True streaming mode with word-level chunks
+python main.py --streaming-mode true-streaming --chunk-type word --window-size 2.0
 
-```json
-{"session_id": "abc123", "timestamp": "2025-01-23T14:30:00Z", "sender": "customer", "message": "Hi, I'm interested in refinancing my loan."}
-{"session_id": "def456", "timestamp": "2025-01-23T14:30:05Z", "sender": "customer", "message": "I need help with my investment portfolio."}
+# Character-level streaming for maximum granularity
+python main.py --streaming-mode true-streaming --chunk-type character --window-size 0.5
+
+# Enhanced mode with rich output
+python main.py --streaming-mode enhanced --debug-style rich --window-size 20
 ```
-
-### Fields
-
-- `session_id` - Unique identifier for conversation session
-- `timestamp` - ISO 8601 timestamp
-- `sender` - Either "customer" or "rm"
-- `message` - The conversation message
-
-## 🔄 Stream Processing
-
-### KeyBy Logic (Simulated)
-
-```python
-# Partition stream by session_id to handle concurrent conversations
-session_buffers[session_id].append(event)
-```
-
-### Windowing Strategy
-
-- **Tumbling Event Time Windows** - 30-second windows by default
-- **Session-based Buffering** - Messages grouped by session_id
-- **Time-based Emission** - Windows emitted when time span exceeds threshold
-
-### Window Output
-
-Each window produces a `ConversationWindow` object:
-
-```python
-@dataclass
-class ConversationWindow:
-    session_id: str
-    window_start: datetime
-    window_end: datetime
-    messages: List[dict]
-```
-
-## 🧠 Quen Integration
-
-### Prompt Format
-
-The application constructs prompts for Quen like:
-
-```
-The following is a conversation between a Relationship Manager and a Customer:
-
-Customer: Hi, I'm interested in refinancing my loan.
-RM: Hello! I'd be happy to help you with refinancing. What's your current loan situation?
-Customer: I have a 30-year fixed mortgage at 4.5% interest rate.
-
-Based on the above window of conversation, what should the RM say next? Please provide a natural, helpful response that continues the conversation appropriately.
-```
-
-### Fallback Behavior
-
-If Quen is unavailable, the application uses mock responses to ensure continuous operation.
-
-## 📝 Output Format
-
-The application prints to console in a "global workspace" format:
-
-```
-================================================================================
-🌐 GLOBAL WORKSPACE ENTRY - Session: abc123
-📅 Window: 14:30:00 - 14:30:30
-💬 Conversation Context (3 messages):
-   Customer: Hi, I'm interested in refinancing my loan.
-   RM: Hello! I'd be happy to help you with refinancing. What's your current loan situation?
-   Customer: I have a 30-year fixed mortgage at 4.5% interest rate.
-🤖 Quen Response: That's a good rate, but we might be able to get you a better one. What's your current home value?
-================================================================================
-```
-
-## 🔧 Configuration
 
 ### Command Line Options
 
-- `--input-file` - Input JSONL file (default: `messages.jsonl`)
-- `--window-size` - Window size in seconds (default: 30)
-- `--speed-factor` - Message emission speed multiplier (default: 2.0)
-- `--log-level` - Logging level (default: INFO)
+| Option | Description | Default |
+|--------|-------------|---------|
+| `--input-file` | Input JSONL file with conversation messages | `messages.jsonl` |
+| `--window-size` | Window size in seconds (supports sub-second values) | `30.0` |
+| `--speed-factor` | Speed factor for message emission | `2.0` |
+| `--streaming-mode` | Streaming mode: `enhanced` or `true-streaming` | `enhanced` |
+| `--chunk-type` | Chunk type for true streaming: `character`, `word`, `sentence` | `word` |
+| `--debug-style` | Output style: `rich`, `colorama`, `plain` | `rich` |
+| `--log-level` | Logging level | `INFO` |
 
-### Environment Variables
+## 📊 Input Format
 
-- `OLLAMA_BASE_URL` - Ollama API base URL (default: `http://localhost:11434`)
-- `QUEN_MODEL_NAME` - Quen model name (default: `quen:32b`)
+The system expects a JSONL file with conversation messages in the following format:
 
-## 🐛 Troubleshooting
-
-### Common Issues
-
-1. **"Quen model not available"**
-   - Install Ollama and pull the Quen model
-   - Or use mock responses (automatic fallback)
-
-2. **"Input file not found"**
-   - Ensure `messages.jsonl` exists in the current directory
-   - Or specify a custom file with `--input-file`
-
-3. **Import errors**
-   - Ensure virtual environment is activated: `source venv/bin/activate`
-   - Install dependencies: `pip install -r requirements.txt`
-
-### Logs
-
-- Application logs are written to `streamllm.log`
-- Console output shows real-time streaming progress
-- Use `--log-level DEBUG` for detailed interaction logs
-
-## 🧪 Testing
-
-### Component Tests
-
-```bash
-# Test individual components
-python test_app.py
+```json
+{"session_id": "abc123", "timestamp": "2024-01-15T14:30:00Z", "sender": "customer", "message": "Hi, I'm interested in refinancing my loan."}
+{"session_id": "abc123", "timestamp": "2024-01-15T14:30:10Z", "sender": "rm", "message": "Hello! I'd be happy to help you with that."}
+{"session_id": "def456", "timestamp": "2024-01-15T14:30:05Z", "sender": "customer", "message": "I need help with my investment portfolio."}
 ```
 
-### Sample Data
+## 🧠 AI Analysis
 
-The included `messages.jsonl` contains:
-- 2 concurrent conversation sessions (`abc123`, `def456`)
-- 28 total messages over ~2 minutes
-- Interleaved messages to demonstrate `keyBy` behavior
+The system provides real-time cognitive analysis including:
 
-### Expected Output
+- **Customer Intent**: What the customer is trying to achieve
+- **RM Strategy**: Recommended strategy for the relationship manager
+- **Urgency Level**: Low/medium/high urgency assessment
+- **Emotion**: Customer's emotional state
+- **Next Action**: Specific next action for the RM
 
-With 30-second windows, you should see:
-- 2-3 window outputs per session
-- Quen responses for each window
-- Proper session separation via `keyBy`
+## 🏗️ Architecture
 
-## 🔮 Future Enhancements
+### Components
 
-- **Full Flink Integration** - Switch to actual Apache Flink when needed
-- **Multiple window types** - Sliding, session windows
-- **Advanced watermarking** - Custom watermark strategies
-- **Stateful processing** - Conversation history tracking
-- **Multiple LLM support** - Integration with other local models
-- **Web UI** - Real-time visualization of streaming
-- **Metrics collection** - Performance and accuracy metrics
+1. **Stream Processors**:
+   - `EnhancedStreamProcessor`: Batched processing with session windows
+   - `TrueStreamingProcessor`: Real-time character/word-level streaming
 
-## 📄 License
+2. **Quen Client**: Local LLM integration via Ollama API
 
-MIT License - see LICENSE file for details.
+3. **Data Models**: Structured conversation events and analysis results
+
+4. **Visual Output**: Rich terminal interface with color-coded sections
+
+### Streaming Modes
+
+#### Enhanced Mode
+- Batches messages within time windows
+- Processes complete conversation segments
+- Suitable for analysis of conversation chunks
+
+#### True Streaming Mode
+- Processes individual characters/words in real-time
+- Maintains cumulative session context
+- Simulates actual streaming scenarios
+- Provides strategic advice based on partial content
+
+## 🔧 Configuration
+
+### Window Sizes
+- **Large windows (30s+)**: Complete conversation analysis
+- **Medium windows (5-30s)**: Conversation segment analysis
+- **Small windows (0.5-5s)**: Real-time streaming simulation
+- **Sub-second windows (<1s)**: Character/word-level processing
+
+### Speed Factors
+- **1.0x**: Real-time speed
+- **2.0x**: 2x faster than real-time
+- **10.0x**: 10x faster for testing
+
+## 📝 Examples
+
+### Example 1: Real-time Streaming Analysis
+```bash
+python main.py --streaming-mode true-streaming --window-size 1.0 --chunk-type word --speed-factor 5.0
+```
+
+**Output**:
+```
+🟦 CUMULATIVE Streaming Window - Session abc123 ✅
+┏━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━┳━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Time         ┃ Speaker     ┃ Chunk       ┃ Type ┃ Complete ┃ Cumulative ┃
+┡━━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━╇━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ 14:30:00.000 │ 👤 Customer │ Hi,         │ word │ ⏳       │            │
+│ 14:30:00.010 │ 👤 Customer │ I'm         │ word │ ⏳       │            │
+│ 14:30:00.020 │ 👤 Customer │ interested  │ word │ ⏳       │            │
+└──────────────┴─────────────┴─────────────┴──────┴──────────┴────────────┘
+
+🎯 Quen Strategic Advice ✅
+Strategic advice to the RM: The RM should immediately acknowledge the customer's interest and gather more detailed information about their current loan situation and financial goals.
+
+🧠 Cognitive Analysis
+┏━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Dimension       ┃ Value                                                                                                                                                                                  ┃
+┡━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ Customer Intent │ The customer is expressing an intent to potentially lower their monthly payments or improve terms of their existing loan through refinancing.                                          │
+│ RM Strategy     │ The recommended strategy for the RM is to engage the customer by asking specific questions about their current loan, interest rates they're looking for, and what motivates them to    │
+│                 │ consider refinancing now. This will help in providing tailored advice and solutions.                                                                                                   │
+│ Urgency Level   │ medium                                                                                                                                                                                 │
+│ Emotion         │ Neutral; however, there might be underlying stress or dissatisfaction with the current financial situation which could affect their emotions.                                          │
+│ Next Action     │ The RM should gather detailed information about the customer's existing loan, including interest rates, monthly payments, and remaining term. This will allow for a more informed      │
+│                 │ discussion on refinancing options.                                                                                                                                                     │
+└─────────────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+
+**Copyright 2024 Emanuel Kuce Radis, IntelMe.AI**
+
+## 🙏 Acknowledgments
+
+- Apache Flink for streaming concepts inspiration
+- Ollama for local LLM deployment
+- Quen/Qwen model for AI analysis capabilities
+- Rich library for beautiful terminal output
+
+## 📞 Support
+
+For support and questions:
+- Create an issue in the repository
+- Contact: Emanuel Kuce Radis (IntelMe.AI)
 
 ---
 
-**Built for prototyping agentic memory and interaction loops with local-only constraints.** 
+**Made with ❤️ by IntelMe.AI** 

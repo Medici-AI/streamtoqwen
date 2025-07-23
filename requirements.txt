@@ -1,7 +1,12 @@
-pyflink==1.0
-requests==2.31.0
-python-dateutil==2.8.2
-dataclasses-json==0.6.3
-typing-extensions==4.8.0
-rich==13.7.0
-colorama==0.4.6 
+# Core dependencies
+requests>=2.31.0
+rich>=13.0.0
+colorama>=0.4.6
+
+# Data processing
+dataclasses-json>=0.6.0
+
+# Development dependencies (optional)
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0 

@@ -2229,3 +2229,315 @@
 2025-07-23 17:33:12,960 - stream_processor_true_streaming - INFO - Window time: 14:30:10 - 14:30:12
 2025-07-23 17:33:12,967 - quen_client - INFO - Sending prompt to Quen for session abc123
 2025-07-23 17:33:20,157 - __main__ - INFO - Streaming interrupted by user
+2025-07-23 17:41:14,658 - __main__ - INFO - ✅ Quen model is available via Ollama
+2025-07-23 17:41:14,658 - __main__ - INFO - Starting true streaming pipeline...
+2025-07-23 17:41:14,658 - stream_processor_true_streaming - INFO - Starting CUMULATIVE true streaming pipeline with word chunks
+2025-07-23 17:41:14,658 - stream_processor_true_streaming - INFO - Window size: 2.0 seconds
+2025-07-23 17:41:14,658 - stream_processor_true_streaming - INFO - Speed factor: 0.1x
+2025-07-23 17:41:14,658 - stream_processor_true_streaming - INFO - Chunk delay: 1.0 seconds
+2025-07-23 17:41:16,666 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 3 total chunks
+2025-07-23 17:41:16,666 - stream_processor_true_streaming - INFO - Window time: 14:30:00 - 14:30:02
+2025-07-23 17:41:16,672 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:41:29,996 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Introduce yourself fully and inquire about the reason f...
+2025-07-23 17:41:32,012 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 5 total chunks
+2025-07-23 17:41:32,012 - stream_processor_true_streaming - INFO - Window time: 14:30:02 - 14:30:04
+2025-07-23 17:41:32,021 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:41:43,005 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should complete her introduction and inquire ab...
+2025-07-23 17:41:45,018 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 7 total chunks
+2025-07-23 17:41:45,018 - stream_processor_true_streaming - INFO - Window time: 14:30:04 - 14:30:06
+2025-07-23 17:41:45,024 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:41:55,826 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should complete her greeting and ask a question...
+2025-07-23 17:41:57,841 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 9 total chunks
+2025-07-23 17:41:57,842 - stream_processor_true_streaming - INFO - Window time: 14:30:06 - 14:30:08
+2025-07-23 17:41:57,848 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:42:08,457 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should complete her introductory greeting and e...
+2025-07-23 17:42:10,471 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 11 total chunks
+2025-07-23 17:42:10,472 - stream_processor_true_streaming - INFO - Window time: 14:30:08 - 14:30:10
+2025-07-23 17:42:10,482 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:42:23,660 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should ask a probing question or make a stateme...
+2025-07-23 17:42:24,421 - __main__ - INFO - Streaming interrupted by user
+2025-07-23 17:42:41,331 - __main__ - INFO - ✅ Quen model is available via Ollama
+2025-07-23 17:42:41,332 - __main__ - INFO - Starting true streaming pipeline...
+2025-07-23 17:42:41,332 - stream_processor_true_streaming - INFO - Starting CUMULATIVE true streaming pipeline with word chunks
+2025-07-23 17:42:41,332 - stream_processor_true_streaming - INFO - Window size: 0.5 seconds
+2025-07-23 17:42:41,332 - stream_processor_true_streaming - INFO - Speed factor: 0.1x
+2025-07-23 17:42:41,332 - stream_processor_true_streaming - INFO - Chunk delay: 1.0 seconds
+2025-07-23 17:42:42,338 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 1 total chunks
+2025-07-23 17:42:42,338 - stream_processor_true_streaming - INFO - Window time: 14:30:00 - 14:30:00
+2025-07-23 17:42:42,343 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:42:52,544 - __main__ - INFO - Streaming interrupted by user
+2025-07-23 17:43:07,072 - __main__ - INFO - ✅ Quen model is available via Ollama
+2025-07-23 17:43:07,073 - __main__ - INFO - Starting true streaming pipeline...
+2025-07-23 17:43:07,073 - stream_processor_true_streaming - INFO - Starting CUMULATIVE true streaming pipeline with word chunks
+2025-07-23 17:43:07,073 - stream_processor_true_streaming - INFO - Window size: 0.5 seconds
+2025-07-23 17:43:07,073 - stream_processor_true_streaming - INFO - Speed factor: 0.5x
+2025-07-23 17:43:07,073 - stream_processor_true_streaming - INFO - Chunk delay: 0.2 seconds
+2025-07-23 17:43:07,677 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 3 total chunks
+2025-07-23 17:43:07,678 - stream_processor_true_streaming - INFO - Window time: 14:30:00 - 14:30:00
+2025-07-23 17:43:07,687 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:43:18,624 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should introduce herself more fully and ask a q...
+2025-07-23 17:43:19,037 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 6 total chunks
+2025-07-23 17:43:19,038 - stream_processor_true_streaming - INFO - Window time: 14:30:00 - 14:30:01
+2025-07-23 17:43:19,046 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:43:26,627 - __main__ - INFO - Streaming interrupted by user
+2025-07-23 17:43:33,042 - __main__ - INFO - ✅ Quen model is available via Ollama
+2025-07-23 17:43:33,042 - __main__ - INFO - Starting true streaming pipeline...
+2025-07-23 17:43:33,042 - stream_processor_true_streaming - INFO - Starting CUMULATIVE true streaming pipeline with word chunks
+2025-07-23 17:43:33,043 - stream_processor_true_streaming - INFO - Window size: 0.5 seconds
+2025-07-23 17:43:33,043 - stream_processor_true_streaming - INFO - Speed factor: 0.9x
+2025-07-23 17:43:33,043 - stream_processor_true_streaming - INFO - Chunk delay: 0.11111111111111112 seconds
+2025-07-23 17:43:33,619 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 5 total chunks
+2025-07-23 17:43:33,620 - stream_processor_true_streaming - INFO - Window time: 14:30:00 - 14:30:00
+2025-07-23 17:43:33,630 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:43:45,226 - __main__ - INFO - Streaming interrupted by user
+2025-07-23 17:44:08,575 - __main__ - INFO - ✅ Quen model is available via Ollama
+2025-07-23 17:44:08,575 - __main__ - INFO - Starting true streaming pipeline...
+2025-07-23 17:44:08,575 - stream_processor_true_streaming - INFO - Starting CUMULATIVE true streaming pipeline with word chunks
+2025-07-23 17:44:08,575 - stream_processor_true_streaming - INFO - Window size: 1.0 seconds
+2025-07-23 17:44:08,575 - stream_processor_true_streaming - INFO - Speed factor: 1.0x
+2025-07-23 17:44:08,575 - stream_processor_true_streaming - INFO - Chunk delay: 0.1 seconds
+2025-07-23 17:44:09,616 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 11 total chunks
+2025-07-23 17:44:09,616 - stream_processor_true_streaming - INFO - Window time: 14:30:00 - 14:30:01
+2025-07-23 17:44:09,628 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:44:24,352 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should introduce herself more warmly and ask op...
+2025-07-23 17:44:24,561 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 12 total chunks
+2025-07-23 17:44:24,561 - stream_processor_true_streaming - INFO - Window time: 14:30:01 - 14:30:02
+2025-07-23 17:44:24,566 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:44:34,669 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should inquire about specific needs or concerns...
+2025-07-23 17:44:34,776 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 12 total chunks
+2025-07-23 17:44:34,776 - stream_processor_true_streaming - INFO - Window time: 14:30:02 - 14:30:03
+2025-07-23 17:44:34,780 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:44:44,538 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should follow up with a question or statement t...
+2025-07-23 17:44:44,647 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 12 total chunks
+2025-07-23 17:44:44,648 - stream_processor_true_streaming - INFO - Window time: 14:30:03 - 14:30:04
+2025-07-23 17:44:44,656 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:44:55,572 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should ask a probing question to understand wha...
+2025-07-23 17:44:55,684 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 12 total chunks
+2025-07-23 17:44:55,684 - stream_processor_true_streaming - INFO - Window time: 14:30:04 - 14:30:05
+2025-07-23 17:44:55,695 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:45:05,684 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should aim to understand the customer’s needs b...
+2025-07-23 17:45:05,794 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 13 total chunks
+2025-07-23 17:45:05,794 - stream_processor_true_streaming - INFO - Window time: 14:30:05 - 14:30:06
+2025-07-23 17:45:05,801 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:45:21,564 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should aim to engage the customer more actively...
+2025-07-23 17:45:22,091 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 21 total chunks
+2025-07-23 17:45:22,091 - stream_processor_true_streaming - INFO - Window time: 14:30:06 - 14:30:07
+2025-07-23 17:45:22,106 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:45:39,764 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should express interest and ask clarifying ques...
+2025-07-23 17:45:39,875 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 21 total chunks
+2025-07-23 17:45:39,876 - stream_processor_true_streaming - INFO - Window time: 14:30:07 - 14:30:08
+2025-07-23 17:45:39,887 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:45:56,811 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should express interest and gather more details...
+2025-07-23 17:45:56,925 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 21 total chunks
+2025-07-23 17:45:56,925 - stream_processor_true_streaming - INFO - Window time: 14:30:08 - 14:30:09
+2025-07-23 17:45:56,939 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:46:20,252 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should acknowledge the customer's interest in r...
+2025-07-23 17:46:20,361 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 21 total chunks
+2025-07-23 17:46:20,361 - stream_processor_true_streaming - INFO - Window time: 14:30:09 - 14:30:10
+2025-07-23 17:46:20,369 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:46:39,508 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should inquire about the customer’s current loa...
+2025-07-23 17:46:39,619 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 21 total chunks
+2025-07-23 17:46:39,620 - stream_processor_true_streaming - INFO - Window time: 14:30:10 - 14:30:11
+2025-07-23 17:46:39,628 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:47:09,632 - quen_client - ERROR - Error communicating with Quen: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-07-23 17:47:09,632 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 17:47:09,738 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 22 total chunks
+2025-07-23 17:47:09,738 - stream_processor_true_streaming - INFO - Window time: 14:30:11 - 14:30:12
+2025-07-23 17:47:09,745 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:47:39,748 - quen_client - ERROR - Error communicating with Quen: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-07-23 17:47:39,749 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 17:47:40,275 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 32 total chunks
+2025-07-23 17:47:40,275 - stream_processor_true_streaming - INFO - Window time: 14:30:12 - 14:30:13
+2025-07-23 17:47:40,288 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:48:10,213 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should express enthusiasm about helping the cus...
+2025-07-23 17:48:10,531 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 34 total chunks
+2025-07-23 17:48:10,531 - stream_processor_true_streaming - INFO - Window time: 14:30:13 - 14:30:14
+2025-07-23 17:48:10,553 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:48:40,555 - quen_client - ERROR - Error communicating with Quen: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-07-23 17:48:40,555 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 17:48:40,661 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 34 total chunks
+2025-07-23 17:48:40,662 - stream_processor_true_streaming - INFO - Window time: 14:30:14 - 14:30:15
+2025-07-23 17:48:40,674 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:49:06,197 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should inquire about the customer’s reasons for...
+2025-07-23 17:49:06,305 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 34 total chunks
+2025-07-23 17:49:06,305 - stream_processor_true_streaming - INFO - Window time: 14:30:15 - 14:30:16
+2025-07-23 17:49:06,315 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:49:33,686 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should acknowledge the customer's interest in r...
+2025-07-23 17:49:33,794 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 34 total chunks
+2025-07-23 17:49:33,794 - stream_processor_true_streaming - INFO - Window time: 14:30:16 - 14:30:17
+2025-07-23 17:49:33,803 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:49:59,308 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should focus on understanding the customer’s mo...
+2025-07-23 17:49:59,420 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 34 total chunks
+2025-07-23 17:49:59,421 - stream_processor_true_streaming - INFO - Window time: 14:30:17 - 14:30:18
+2025-07-23 17:49:59,441 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:50:22,159 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should acknowledge the customer’s interest in r...
+2025-07-23 17:50:22,270 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 35 total chunks
+2025-07-23 17:50:22,270 - stream_processor_true_streaming - INFO - Window time: 14:30:18 - 14:30:19
+2025-07-23 17:50:22,290 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:50:45,764 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should gather more detailed information about t...
+2025-07-23 17:50:46,289 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 45 total chunks
+2025-07-23 17:50:46,289 - stream_processor_true_streaming - INFO - Window time: 14:30:19 - 14:30:20
+2025-07-23 17:50:46,300 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:51:09,719 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should acknowledge the customer’s interest in r...
+2025-07-23 17:51:10,141 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 48 total chunks
+2025-07-23 17:51:10,141 - stream_processor_true_streaming - INFO - Window time: 14:30:20 - 14:30:21
+2025-07-23 17:51:10,162 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:51:32,138 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should offer a detailed analysis of refinancing...
+2025-07-23 17:51:32,253 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 48 total chunks
+2025-07-23 17:51:32,253 - stream_processor_true_streaming - INFO - Window time: 14:30:21 - 14:30:22
+2025-07-23 17:51:32,276 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:51:52,879 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should gather more details about the customer’s...
+2025-07-23 17:51:52,987 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 48 total chunks
+2025-07-23 17:51:52,987 - stream_processor_true_streaming - INFO - Window time: 14:30:22 - 14:30:23
+2025-07-23 17:51:52,998 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:52:11,267 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should explore the customer’s motivations for r...
+2025-07-23 17:52:11,381 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 48 total chunks
+2025-07-23 17:52:11,382 - stream_processor_true_streaming - INFO - Window time: 14:30:23 - 14:30:24
+2025-07-23 17:52:11,403 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:52:32,884 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should gather information on current market rat...
+2025-07-23 17:52:32,998 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 48 total chunks
+2025-07-23 17:52:32,999 - stream_processor_true_streaming - INFO - Window time: 14:30:24 - 14:30:25
+2025-07-23 17:52:33,023 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:52:52,837 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should gather current market interest rates and...
+2025-07-23 17:52:52,949 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 49 total chunks
+2025-07-23 17:52:52,950 - stream_processor_true_streaming - INFO - Window time: 14:30:25 - 14:30:26
+2025-07-23 17:52:52,972 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:53:17,295 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should acknowledge the customer’s interest in r...
+2025-07-23 17:53:17,824 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 59 total chunks
+2025-07-23 17:53:17,824 - stream_processor_true_streaming - INFO - Window time: 14:30:26 - 14:30:27
+2025-07-23 17:53:17,853 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:53:40,881 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should now focus on discussing current market r...
+2025-07-23 17:53:41,199 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 61 total chunks
+2025-07-23 17:53:41,200 - stream_processor_true_streaming - INFO - Window time: 14:30:27 - 14:30:28
+2025-07-23 17:53:41,228 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:54:06,991 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should acknowledge the customer's interest in r...
+2025-07-23 17:54:07,103 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 61 total chunks
+2025-07-23 17:54:07,103 - stream_processor_true_streaming - INFO - Window time: 14:30:28 - 14:30:29
+2025-07-23 17:54:07,132 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:54:29,254 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should discuss current market interest rates an...
+2025-07-23 17:54:29,367 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 61 total chunks
+2025-07-23 17:54:29,368 - stream_processor_true_streaming - INFO - Window time: 14:30:29 - 14:30:30
+2025-07-23 17:54:29,398 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:54:53,310 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should leverage the customer’s interest in refi...
+2025-07-23 17:54:53,422 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 61 total chunks
+2025-07-23 17:54:53,423 - stream_processor_true_streaming - INFO - Window time: 14:30:30 - 14:30:31
+2025-07-23 17:54:53,450 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:55:13,903 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should leverage the customer’s current interest...
+2025-07-23 17:55:14,015 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 62 total chunks
+2025-07-23 17:55:14,015 - stream_processor_true_streaming - INFO - Window time: 14:30:31 - 14:30:32
+2025-07-23 17:55:14,041 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:55:33,377 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should confirm the customer’s interest in refin...
+2025-07-23 17:55:33,905 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 70 total chunks
+2025-07-23 17:55:33,906 - stream_processor_true_streaming - INFO - Window time: 14:30:32 - 14:30:33
+2025-07-23 17:55:33,929 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:55:55,070 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should leverage the customer’s interest in refi...
+2025-07-23 17:55:55,179 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 70 total chunks
+2025-07-23 17:55:55,179 - stream_processor_true_streaming - INFO - Window time: 14:30:33 - 14:30:34
+2025-07-23 17:55:55,200 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:56:13,577 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should explore the current market interest rate...
+2025-07-23 17:56:13,691 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 70 total chunks
+2025-07-23 17:56:13,691 - stream_processor_true_streaming - INFO - Window time: 14:30:34 - 14:30:35
+2025-07-23 17:56:13,719 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:56:35,946 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should leverage the provided details about the ...
+2025-07-23 17:56:36,058 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 70 total chunks
+2025-07-23 17:56:36,059 - stream_processor_true_streaming - INFO - Window time: 14:30:35 - 14:30:36
+2025-07-23 17:56:36,096 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:56:57,199 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should confirm the customer’s interest in refin...
+2025-07-23 17:56:57,310 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 70 total chunks
+2025-07-23 17:56:57,311 - stream_processor_true_streaming - INFO - Window time: 14:30:36 - 14:30:37
+2025-07-23 17:56:57,341 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:57:20,282 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should leverage the customer’s interest in refi...
+2025-07-23 17:57:20,393 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 70 total chunks
+2025-07-23 17:57:20,394 - stream_processor_true_streaming - INFO - Window time: 14:30:37 - 14:30:38
+2025-07-23 17:57:20,425 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:57:42,255 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should acknowledge the customer's interest in r...
+2025-07-23 17:57:42,368 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 71 total chunks
+2025-07-23 17:57:42,368 - stream_processor_true_streaming - INFO - Window time: 14:30:38 - 14:30:39
+2025-07-23 17:57:42,401 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:58:11,072 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should confirm the details provided by the cust...
+2025-07-23 17:58:11,491 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 81 total chunks
+2025-07-23 17:58:11,491 - stream_processor_true_streaming - INFO - Window time: 14:30:39 - 14:30:40
+2025-07-23 17:58:11,525 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:58:34,759 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should continue to gather information and then ...
+2025-07-23 17:58:35,802 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 91 total chunks
+2025-07-23 17:58:35,802 - stream_processor_true_streaming - INFO - Window time: 14:30:40 - 14:30:41
+2025-07-23 17:58:35,826 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:58:59,642 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should continue by offering a detailed comparis...
+2025-07-23 17:58:59,855 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 92 total chunks
+2025-07-23 17:58:59,856 - stream_processor_true_streaming - INFO - Window time: 14:30:41 - 14:30:42
+2025-07-23 17:58:59,887 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:59:24,182 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should leverage the customer's interest in refi...
+2025-07-23 17:59:24,291 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 92 total chunks
+2025-07-23 17:59:24,291 - stream_processor_true_streaming - INFO - Window time: 14:30:42 - 14:30:43
+2025-07-23 17:59:24,324 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 17:59:49,938 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should confirm the customer’s interest and prov...
+2025-07-23 17:59:50,051 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 92 total chunks
+2025-07-23 17:59:50,051 - stream_processor_true_streaming - INFO - Window time: 14:30:43 - 14:30:44
+2025-07-23 17:59:50,089 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 18:00:10,770 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should confirm the customer’s intent and provid...
+2025-07-23 18:00:10,883 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 92 total chunks
+2025-07-23 18:00:10,883 - stream_processor_true_streaming - INFO - Window time: 14:30:44 - 14:30:45
+2025-07-23 18:00:10,920 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 18:00:34,002 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should confirm the customer’s interest in refin...
+2025-07-23 18:00:34,114 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 93 total chunks
+2025-07-23 18:00:34,115 - stream_processor_true_streaming - INFO - Window time: 14:30:45 - 14:30:46
+2025-07-23 18:00:34,153 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 18:00:55,107 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should confirm the refinancing interest rate of...
+2025-07-23 18:00:55,219 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 94 total chunks
+2025-07-23 18:00:55,219 - stream_processor_true_streaming - INFO - Window time: 14:30:46 - 14:30:47
+2025-07-23 18:00:55,254 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 18:01:23,315 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Sepideh should confirm the customer’s interest and proc...
+2025-07-23 18:01:23,423 - stream_processor_true_streaming - INFO - Processing CUMULATIVE window for session abc123: 94 total chunks
+2025-07-23 18:01:23,424 - stream_processor_true_streaming - INFO - Window time: 14:30:47 - 14:30:48
+2025-07-23 18:01:23,464 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 18:01:33,728 - __main__ - INFO - Streaming interrupted by user

@@ -1,28 +1,15 @@
-{"session_id": "abc123", "timestamp": "2025-01-23T14:30:00Z", "sender": "customer", "message": "Hi, I'm interested in refinancing my loan."}
-{"session_id": "def456", "timestamp": "2025-01-23T14:30:05Z", "sender": "customer", "message": "I need help with my investment portfolio."}
-{"session_id": "abc123", "timestamp": "2025-01-23T14:30:10Z", "sender": "rm", "message": "Hello! I'd be happy to help you with refinancing. What's your current loan situation?"}
-{"session_id": "def456", "timestamp": "2025-01-23T14:30:15Z", "sender": "rm", "message": "Great! I can help you optimize your investment strategy. What are your current goals?"}
-{"session_id": "abc123", "timestamp": "2025-01-23T14:30:20Z", "sender": "customer", "message": "I have a 30-year fixed mortgage at 4.5% interest rate."}
-{"session_id": "def456", "timestamp": "2025-01-23T14:30:25Z", "sender": "customer", "message": "I want to save for retirement and my kids' college education."}
-{"session_id": "abc123", "timestamp": "2025-01-23T14:30:30Z", "sender": "rm", "message": "That's a good rate, but we might be able to get you a better one. What's your current home value?"}
-{"session_id": "def456", "timestamp": "2025-01-23T14:30:35Z", "sender": "rm", "message": "Excellent goals! Let's create a diversified portfolio that balances growth and safety."}
-{"session_id": "abc123", "timestamp": "2025-01-23T14:30:40Z", "sender": "customer", "message": "My home is worth about $450,000 and I owe $320,000."}
-{"session_id": "def456", "timestamp": "2025-01-23T14:30:45Z", "sender": "customer", "message": "I have about $50,000 to invest initially, and can add $500 monthly."}
-{"session_id": "abc123", "timestamp": "2025-01-23T14:30:50Z", "sender": "rm", "message": "Perfect! With that equity, we can likely get you a rate around 3.8%. Would you like to see the numbers?"}
-{"session_id": "def456", "timestamp": "2025-01-23T14:30:55Z", "sender": "rm", "message": "That's a solid starting point. I'd recommend a mix of index funds and bonds. How risk-averse are you?"}
-{"session_id": "abc123", "timestamp": "2025-01-23T14:31:00Z", "sender": "customer", "message": "Yes, please show me the monthly payment comparison."}
-{"session_id": "def456", "timestamp": "2025-01-23T14:31:05Z", "sender": "customer", "message": "I'm moderately risk-averse. I want steady growth but can handle some market volatility."}
-{"session_id": "abc123", "timestamp": "2025-01-23T14:31:10Z", "sender": "rm", "message": "Great! Your current payment is about $1,620. With refinancing, it would be around $1,490. That's $130 monthly savings."}
-{"session_id": "def456", "timestamp": "2025-01-23T14:31:15Z", "sender": "rm", "message": "Perfect! I'd suggest 60% in a broad market index fund, 30% in bonds, and 10% in international stocks."}
-{"session_id": "abc123", "timestamp": "2025-01-23T14:31:20Z", "sender": "customer", "message": "That sounds great! What are the closing costs?"}
-{"session_id": "def456", "timestamp": "2025-01-23T14:31:25Z", "sender": "customer", "message": "That allocation makes sense. What about fees and minimum investments?"}
-{"session_id": "abc123", "timestamp": "2025-01-23T14:31:30Z", "sender": "rm", "message": "Closing costs would be about $3,200, but we can roll them into the loan. You'd break even in about 25 months."}
-{"session_id": "def456", "timestamp": "2025-01-23T14:31:35Z", "sender": "rm", "message": "Our index funds have very low expense ratios, around 0.05%. Minimum investment is $1,000 per fund."}
-{"session_id": "abc123", "timestamp": "2025-01-23T14:31:40Z", "sender": "customer", "message": "That's reasonable. When can we start the application process?"}
-{"session_id": "def456", "timestamp": "2025-01-23T14:31:45Z", "sender": "customer", "message": "Excellent! I'm ready to get started. Should I bring any documents to our next meeting?"}
-{"session_id": "abc123", "timestamp": "2025-01-23T14:31:50Z", "sender": "rm", "message": "We can start right now! I'll need your recent pay stubs, tax returns, and bank statements."}
-{"session_id": "def456", "timestamp": "2025-01-23T14:31:55Z", "sender": "rm", "message": "Yes, please bring your current investment statements, tax returns, and any retirement account information."}
-{"session_id": "abc123", "timestamp": "2025-01-23T14:32:00Z", "sender": "customer", "message": "Perfect! I'll gather those documents and we can proceed. Thank you for your help!"}
-{"session_id": "def456", "timestamp": "2025-01-23T14:32:05Z", "sender": "customer", "message": "I'll have everything ready. Looking forward to building a solid investment strategy together!"}
-{"session_id": "abc123", "timestamp": "2025-01-23T14:32:10Z", "sender": "rm", "message": "You're welcome! I'll send you the application link and we'll get this refinancing done for you."}
-{"session_id": "def456", "timestamp": "2025-01-23T14:32:15Z", "sender": "rm", "message": "Excellent! I'm excited to help you achieve your financial goals. Let's schedule our next meeting."} 
+{"session_id": "abc123", "timestamp": "2025-01-23T14:30:00Z", "sender": "rm", "message": "Hi, I’m Sepideh, your relationship manager. How can I support you today?"}
+{"session_id": "abc123", "timestamp": "2025-01-23T14:30:06Z", "sender": "customer", "message": "Hi Sepideh. I’m thinking about refinancing my home loan."}
+{"session_id": "abc123", "timestamp": "2025-01-23T14:30:12Z", "sender": "rm", "message": "Of course. Could you tell me your current interest rate and loan balance?"}
+{"session_id": "abc123", "timestamp": "2025-01-23T14:30:19Z", "sender": "customer", "message": "Sure. It’s a 30-year fixed mortgage at 4.5%, and I still owe about $320,000."}
+{"session_id": "abc123", "timestamp": "2025-01-23T14:30:26Z", "sender": "rm", "message": "Thanks. And do you have a recent estimate of your home’s market value?"}
+{"session_id": "abc123", "timestamp": "2025-01-23T14:30:32Z", "sender": "customer", "message": "Yes, it’s around $450,000 based on a recent appraisal."}
+{"session_id": "abc123", "timestamp": "2025-01-23T14:30:39Z", "sender": "rm", "message": "That gives you good equity. I think we can lower your rate to around 3.8%. Would you like to compare monthly payments?"}
+{"session_id": "abc123", "timestamp": "2025-01-23T14:30:46Z", "sender": "customer", "message": "Yes, please."}
+{"session_id": "abc123", "timestamp": "2025-01-23T14:30:53Z", "sender": "rm", "message": "With a 3.8% rate, your new monthly payment would be around $1,490, saving you roughly $130 per month."}
+{"session_id": "abc123", "timestamp": "2025-01-23T14:30:59Z", "sender": "customer", "message": "That sounds helpful. What would the closing costs be?"}
+{"session_id": "abc123", "timestamp": "2025-01-23T14:31:05Z", "sender": "rm", "message": "They’d be around $3,200, but we can roll them into the loan. You’d break even in just over two years."}
+{"session_id": "abc123", "timestamp": "2025-01-23T14:31:12Z", "sender": "customer", "message": "I’m interested. What do you need from me to get started?"}
+{"session_id": "abc123", "timestamp": "2025-01-23T14:31:18Z", "sender": "rm", "message": "Just your most recent pay stubs, tax returns, and bank statements. I’ll guide you through everything from there."}
+{"session_id": "abc123", "timestamp": "2025-01-23T14:31:25Z", "sender": "customer", "message": "Great, I’ll get those ready today."}
+{"session_id": "abc123", "timestamp": "2025-01-23T14:31:30Z", "sender": "rm", "message": "Perfect. I’ll prepare the application and check in with you tomorrow."}
