@@ -1,0 +1,16 @@
+RM Conversation Streamer with Flink & Quen Integration
+Copyright 2024 Emanuel Kuce Radis, IntelMe.AI
+
+This product includes software developed by:
+- Apache Software Foundation (Apache License 2.0) - for Flink concepts inspiration
+- Ollama (MIT License) - for local LLM deployment
+- Rich (MIT License) - for terminal output formatting
+- Colorama (BSD License) - for cross-platform colored output
+- Requests (Apache License 2.0) - for HTTP client functionality
+
+For more information about these projects, see:
+- Apache Flink: https://flink.apache.org/
+- Ollama: https://ollama.ai/
+- Rich: https://github.com/Textualize/rich
+- Colorama: https://github.com/tartley/colorama
+- Requests: https://requests.readthedocs.io/ 
