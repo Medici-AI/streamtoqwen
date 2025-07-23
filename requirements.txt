@@ -2,4 +2,6 @@ pyflink==1.0
 requests==2.31.0
 python-dateutil==2.8.2
 dataclasses-json==0.6.3
-typing-extensions==4.8.0 
+typing-extensions==4.8.0
+rich==13.7.0
+colorama==0.4.6 

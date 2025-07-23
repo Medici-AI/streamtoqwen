@@ -15,7 +15,8 @@ import logging
 import sys
 from pathlib import Path
 
-from stream_processor_simple import SimpleStreamProcessor
+from stream_processor_enhanced import EnhancedStreamProcessor
+from stream_processor_true_streaming import TrueStreamingProcessor
 from quen_client import QuenClient
 
 
@@ -75,9 +76,9 @@ Examples:
     
     parser.add_argument(
         '--window-size',
-        type=int,
-        default=30,
-        help='Window size in seconds for conversation aggregation (default: 30)'
+        type=float,
+        default=30.0,
+        help='Window size in seconds for conversation aggregation (default: 30.0, supports sub-second values like 0.3)'
     )
     
     parser.add_argument(
@@ -94,6 +95,27 @@ Examples:
         help='Logging level (default: INFO)'
     )
     
+    parser.add_argument(
+        '--debug-style',
+        default='rich',
+        choices=['rich', 'colorama', 'plain'],
+        help='Debug output style (default: rich)'
+    )
+    
+    parser.add_argument(
+        '--streaming-mode',
+        default='enhanced',
+        choices=['enhanced', 'true-streaming'],
+        help='Streaming mode: enhanced (batched) or true-streaming (character/word level) (default: enhanced)'
+    )
+    
+    parser.add_argument(
+        '--chunk-type',
+        default='word',
+        choices=['character', 'word', 'sentence'],
+        help='Chunk type for true streaming mode (default: word)'
+    )
+    
     args = parser.parse_args()
     
     # Setup logging
@@ -108,6 +130,10 @@ Examples:
     print(f"⏱️  Window Size: {args.window_size} seconds")
     print(f"⚡ Speed Factor: {args.speed_factor}x")
     print(f"🔧 Log Level: {args.log_level}")
+    print(f"🎨 Debug Style: {args.debug_style}")
+    print(f"🔄 Streaming Mode: {args.streaming_mode}")
+    if args.streaming_mode == 'true-streaming':
+        print(f"📝 Chunk Type: {args.chunk_type}")
     print("=" * 80)
     
     # Check prerequisites
@@ -116,15 +142,26 @@ Examples:
         sys.exit(1)
     
     try:
-        # Initialize Quen client
-        quen_client = QuenClient()
-        
-        # Initialize simplified stream processor
-        processor = SimpleStreamProcessor(quen_client)
-        
-        # Execute the streaming pipeline
-        logger.info("Starting streaming pipeline...")
-        processor.execute(args.input_file, args.window_size, args.speed_factor)
+        if args.streaming_mode == 'true-streaming':
+            # Initialize true streaming processor
+            processor = TrueStreamingProcessor(debug_style=args.debug_style)
+            logger.info("Starting true streaming pipeline...")
+            processor.execute(
+                input_file=args.input_file,
+                window_size_seconds=args.window_size,
+                speed_factor=args.speed_factor,
+                chunk_type=args.chunk_type
+            )
+        else:
+            # Initialize Quen client
+            quen_client = QuenClient()
+            
+            # Initialize enhanced stream processor
+            processor = EnhancedStreamProcessor(quen_client, debug_style=args.debug_style)
+            
+            # Execute the streaming pipeline
+            logger.info("Starting enhanced streaming pipeline...")
+            processor.execute(args.input_file, args.window_size, args.speed_factor)
         
     except KeyboardInterrupt:
         logger.info("Streaming interrupted by user")
