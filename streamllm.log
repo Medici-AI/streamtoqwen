@@ -1,0 +1,307 @@
+2025-07-23 14:37:11,645 - __main__ - WARNING - Quen model not available via Ollama. Will use mock responses.
+2025-07-23 14:37:11,645 - __main__ - INFO - To use real Quen model:
+2025-07-23 14:37:11,645 - __main__ - INFO - 1. Install Ollama: https://ollama.ai/
+2025-07-23 14:37:11,645 - __main__ - INFO - 2. Pull Quen model: ollama pull quen:32b
+2025-07-23 14:37:11,645 - __main__ - INFO - 3. Start Ollama service
+2025-07-23 14:37:11,645 - __main__ - INFO - Starting streaming pipeline...
+2025-07-23 14:37:11,645 - stream_processor_simple - INFO - Starting simplified streaming pipeline
+2025-07-23 14:37:11,645 - stream_processor_simple - INFO - Input file: messages.jsonl
+2025-07-23 14:37:11,645 - stream_processor_simple - INFO - Window size: 15 seconds
+2025-07-23 14:37:11,645 - stream_processor_simple - INFO - Speed factor: 10.0x
+2025-07-23 14:37:11,645 - stream_processor_simple - INFO - KeyBy: session_id (simulated)
+2025-07-23 14:37:11,645 - stream_processor_simple - INFO - Sink: Quen model via Ollama
+2025-07-23 14:37:11,862 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 14:37:11,862 - stream_processor_simple - INFO - Window time: 14:30:00 - 14:30:20
+2025-07-23 14:37:11,863 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:37:11,866 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:37:11,866 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:37:11,919 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 14:37:11,920 - stream_processor_simple - INFO - Window time: 14:30:05 - 14:30:25
+2025-07-23 14:37:11,920 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:37:11,924 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:37:11,924 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:37:12,195 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 14:37:12,196 - stream_processor_simple - INFO - Window time: 14:30:30 - 14:30:50
+2025-07-23 14:37:12,196 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:37:12,199 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:37:12,199 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:37:12,252 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 14:37:12,253 - stream_processor_simple - INFO - Window time: 14:30:35 - 14:30:55
+2025-07-23 14:37:12,253 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:37:12,256 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:37:12,256 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:37:12,526 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 14:37:12,527 - stream_processor_simple - INFO - Window time: 14:31:00 - 14:31:20
+2025-07-23 14:37:12,527 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:37:12,530 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:37:12,530 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:37:12,585 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 14:37:12,585 - stream_processor_simple - INFO - Window time: 14:31:05 - 14:31:25
+2025-07-23 14:37:12,585 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:37:12,588 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:37:12,588 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:37:12,860 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 14:37:12,861 - stream_processor_simple - INFO - Window time: 14:31:30 - 14:31:50
+2025-07-23 14:37:12,861 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:37:12,865 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:37:12,865 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:37:12,920 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 14:37:12,920 - stream_processor_simple - INFO - Window time: 14:31:35 - 14:31:55
+2025-07-23 14:37:12,920 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:37:12,922 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:37:12,922 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:37:13,189 - stream_processor_simple - INFO - Processing window for session abc123: 2 messages
+2025-07-23 14:37:13,190 - stream_processor_simple - INFO - Window time: 14:32:00 - 14:32:10
+2025-07-23 14:37:13,190 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:37:13,193 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:37:13,193 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:37:13,193 - stream_processor_simple - INFO - Processing window for session def456: 2 messages
+2025-07-23 14:37:13,193 - stream_processor_simple - INFO - Window time: 14:32:05 - 14:32:15
+2025-07-23 14:37:13,193 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:37:13,196 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:37:13,196 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:37:13,196 - stream_processor_simple - INFO - Streaming completed. Processed 28 messages.
+2025-07-23 14:39:33,493 - __main__ - WARNING - Quen model not available via Ollama. Will use mock responses.
+2025-07-23 14:39:33,493 - __main__ - INFO - To use real Quen model:
+2025-07-23 14:39:33,493 - __main__ - INFO - 1. Install Ollama: https://ollama.ai/
+2025-07-23 14:39:33,493 - __main__ - INFO - 2. Pull Quen model: ollama pull quen:32b
+2025-07-23 14:39:33,493 - __main__ - INFO - 3. Start Ollama service
+2025-07-23 14:39:33,493 - __main__ - INFO - Starting streaming pipeline...
+2025-07-23 14:39:33,493 - stream_processor_simple - INFO - Starting simplified streaming pipeline
+2025-07-23 14:39:33,493 - stream_processor_simple - INFO - Input file: messages.jsonl
+2025-07-23 14:39:33,493 - stream_processor_simple - INFO - Window size: 15 seconds
+2025-07-23 14:39:33,493 - stream_processor_simple - INFO - Speed factor: 10.0x
+2025-07-23 14:39:33,493 - stream_processor_simple - INFO - KeyBy: session_id (simulated)
+2025-07-23 14:39:33,493 - stream_processor_simple - INFO - Sink: Quen model via Ollama
+2025-07-23 14:39:33,708 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 14:39:33,709 - stream_processor_simple - INFO - Window time: 14:30:00 - 14:30:20
+2025-07-23 14:39:33,709 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:39:33,713 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:39:33,713 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:39:33,767 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 14:39:33,767 - stream_processor_simple - INFO - Window time: 14:30:05 - 14:30:25
+2025-07-23 14:39:33,767 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:39:33,771 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:39:33,771 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:39:34,041 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 14:39:34,042 - stream_processor_simple - INFO - Window time: 14:30:30 - 14:30:50
+2025-07-23 14:39:34,042 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:39:34,047 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:39:34,047 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:39:34,100 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 14:39:34,100 - stream_processor_simple - INFO - Window time: 14:30:35 - 14:30:55
+2025-07-23 14:39:34,100 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:39:34,104 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:39:34,104 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:39:34,361 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 14:39:34,362 - stream_processor_simple - INFO - Window time: 14:31:00 - 14:31:20
+2025-07-23 14:39:34,362 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:39:34,368 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:39:34,368 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:39:34,420 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 14:39:34,420 - stream_processor_simple - INFO - Window time: 14:31:05 - 14:31:25
+2025-07-23 14:39:34,420 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:39:34,424 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:39:34,424 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:39:34,693 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 14:39:34,694 - stream_processor_simple - INFO - Window time: 14:31:30 - 14:31:50
+2025-07-23 14:39:34,694 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:39:34,700 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:39:34,700 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:39:34,751 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 14:39:34,751 - stream_processor_simple - INFO - Window time: 14:31:35 - 14:31:55
+2025-07-23 14:39:34,751 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:39:34,756 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:39:34,756 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:39:35,028 - stream_processor_simple - INFO - Processing window for session abc123: 2 messages
+2025-07-23 14:39:35,028 - stream_processor_simple - INFO - Window time: 14:32:00 - 14:32:10
+2025-07-23 14:39:35,028 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:39:35,033 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:39:35,034 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:39:35,034 - stream_processor_simple - INFO - Processing window for session def456: 2 messages
+2025-07-23 14:39:35,034 - stream_processor_simple - INFO - Window time: 14:32:05 - 14:32:15
+2025-07-23 14:39:35,034 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:39:35,038 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:39:35,038 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:39:35,039 - stream_processor_simple - INFO - Streaming completed. Processed 28 messages.
+2025-07-23 14:41:30,466 - __main__ - WARNING - Quen model not available via Ollama. Will use mock responses.
+2025-07-23 14:41:30,467 - __main__ - INFO - To use real Quen model:
+2025-07-23 14:41:30,467 - __main__ - INFO - 1. Install Ollama: https://ollama.ai/
+2025-07-23 14:41:30,467 - __main__ - INFO - 2. Pull Quen model: ollama pull quen:32b
+2025-07-23 14:41:30,467 - __main__ - INFO - 3. Start Ollama service
+2025-07-23 14:41:30,467 - __main__ - INFO - Starting streaming pipeline...
+2025-07-23 14:41:30,467 - stream_processor_simple - INFO - Starting simplified streaming pipeline
+2025-07-23 14:41:30,467 - stream_processor_simple - INFO - Input file: messages.jsonl
+2025-07-23 14:41:30,467 - stream_processor_simple - INFO - Window size: 5 seconds
+2025-07-23 14:41:30,467 - stream_processor_simple - INFO - Speed factor: 10.0x
+2025-07-23 14:41:30,467 - stream_processor_simple - INFO - KeyBy: session_id (simulated)
+2025-07-23 14:41:30,467 - stream_processor_simple - INFO - Sink: Quen model via Ollama
+2025-07-23 14:41:30,576 - stream_processor_simple - INFO - Processing window for session abc123: 2 messages
+2025-07-23 14:41:30,576 - stream_processor_simple - INFO - Window time: 14:30:00 - 14:30:10
+2025-07-23 14:41:30,576 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:41:30,581 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:41:30,581 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:41:30,636 - stream_processor_simple - INFO - Processing window for session def456: 2 messages
+2025-07-23 14:41:30,637 - stream_processor_simple - INFO - Window time: 14:30:05 - 14:30:15
+2025-07-23 14:41:30,637 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:41:30,639 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:41:30,639 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:41:30,804 - stream_processor_simple - INFO - Processing window for session abc123: 2 messages
+2025-07-23 14:41:30,804 - stream_processor_simple - INFO - Window time: 14:30:20 - 14:30:30
+2025-07-23 14:41:30,805 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:41:30,810 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:41:30,810 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:41:30,866 - stream_processor_simple - INFO - Processing window for session def456: 2 messages
+2025-07-23 14:41:30,866 - stream_processor_simple - INFO - Window time: 14:30:25 - 14:30:35
+2025-07-23 14:41:30,866 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:41:30,872 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:41:30,872 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:41:31,037 - stream_processor_simple - INFO - Processing window for session abc123: 2 messages
+2025-07-23 14:41:31,038 - stream_processor_simple - INFO - Window time: 14:30:40 - 14:30:50
+2025-07-23 14:41:31,038 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:41:31,044 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:41:31,044 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:41:31,100 - stream_processor_simple - INFO - Processing window for session def456: 2 messages
+2025-07-23 14:41:31,100 - stream_processor_simple - INFO - Window time: 14:30:45 - 14:30:55
+2025-07-23 14:41:31,101 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:41:31,105 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:41:31,106 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:41:31,271 - stream_processor_simple - INFO - Processing window for session abc123: 2 messages
+2025-07-23 14:41:31,272 - stream_processor_simple - INFO - Window time: 14:31:00 - 14:31:10
+2025-07-23 14:41:31,272 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:41:31,278 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:41:31,278 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:41:31,330 - stream_processor_simple - INFO - Processing window for session def456: 2 messages
+2025-07-23 14:41:31,330 - stream_processor_simple - INFO - Window time: 14:31:05 - 14:31:15
+2025-07-23 14:41:31,331 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:41:31,336 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:41:31,336 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:41:31,501 - stream_processor_simple - INFO - Processing window for session abc123: 2 messages
+2025-07-23 14:41:31,502 - stream_processor_simple - INFO - Window time: 14:31:20 - 14:31:30
+2025-07-23 14:41:31,502 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:41:31,506 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:41:31,506 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:41:31,561 - stream_processor_simple - INFO - Processing window for session def456: 2 messages
+2025-07-23 14:41:31,561 - stream_processor_simple - INFO - Window time: 14:31:25 - 14:31:35
+2025-07-23 14:41:31,561 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:41:31,566 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:41:31,566 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:41:31,725 - stream_processor_simple - INFO - Processing window for session abc123: 2 messages
+2025-07-23 14:41:31,725 - stream_processor_simple - INFO - Window time: 14:31:40 - 14:31:50
+2025-07-23 14:41:31,725 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:41:31,730 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:41:31,730 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:41:31,784 - stream_processor_simple - INFO - Processing window for session def456: 2 messages
+2025-07-23 14:41:31,784 - stream_processor_simple - INFO - Window time: 14:31:45 - 14:31:55
+2025-07-23 14:41:31,784 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:41:31,787 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:41:31,787 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:41:31,952 - stream_processor_simple - INFO - Processing window for session abc123: 2 messages
+2025-07-23 14:41:31,952 - stream_processor_simple - INFO - Window time: 14:32:00 - 14:32:10
+2025-07-23 14:41:31,952 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:41:31,957 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:41:31,958 - quen_client - WARNING - Using mock response for session abc123
+2025-07-23 14:41:32,013 - stream_processor_simple - INFO - Processing window for session def456: 2 messages
+2025-07-23 14:41:32,013 - stream_processor_simple - INFO - Window time: 14:32:05 - 14:32:15
+2025-07-23 14:41:32,013 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:41:32,016 - quen_client - ERROR - Quen API error: 404 - {"error":"model 'quen:32b' not found"}
+2025-07-23 14:41:32,016 - quen_client - WARNING - Using mock response for session def456
+2025-07-23 14:41:32,072 - stream_processor_simple - INFO - Streaming completed. Processed 28 messages.
+2025-07-23 14:43:37,518 - __main__ - INFO - ✅ Quen model is available via Ollama
+2025-07-23 14:43:37,518 - __main__ - INFO - Starting streaming pipeline...
+2025-07-23 14:43:37,518 - stream_processor_simple - INFO - Starting simplified streaming pipeline
+2025-07-23 14:43:37,518 - stream_processor_simple - INFO - Input file: messages.jsonl
+2025-07-23 14:43:37,518 - stream_processor_simple - INFO - Window size: 20 seconds
+2025-07-23 14:43:37,518 - stream_processor_simple - INFO - Speed factor: 5.0x
+2025-07-23 14:43:37,518 - stream_processor_simple - INFO - KeyBy: session_id (simulated)
+2025-07-23 14:43:37,519 - stream_processor_simple - INFO - Sink: Quen model via Ollama
+2025-07-23 14:43:37,935 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 14:43:37,935 - stream_processor_simple - INFO - Window time: 14:30:00 - 14:30:20
+2025-07-23 14:43:37,935 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:43:45,750 - quen_client - INFO - Received response from Quen: RM: Thank you for sharing that information with me! Given your current situation, it would be benefi...
+2025-07-23 14:43:45,855 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 14:43:45,855 - stream_processor_simple - INFO - Window time: 14:30:05 - 14:30:25
+2025-07-23 14:43:45,855 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:43:51,102 - quen_client - INFO - Received response from Quen: RM: Those are important goals. To better tailor our approach, could you share more about your curren...
+2025-07-23 14:43:51,619 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 14:43:51,619 - stream_processor_simple - INFO - Window time: 14:30:30 - 14:30:50
+2025-07-23 14:43:51,619 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:43:58,291 - quen_client - INFO - Received response from Quen: RM: Great! Before we proceed with the numbers, it might be useful for you to know how this new rate ...
+2025-07-23 14:43:58,391 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 14:43:58,391 - stream_processor_simple - INFO - Window time: 14:30:35 - 14:30:55
+2025-07-23 14:43:58,391 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:44:06,778 - quen_client - INFO - Received response from Quen: Rm: Great to hear about your investment plan! Given your monthly contributions, we can look at setti...
+2025-07-23 14:44:07,292 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 14:44:07,292 - stream_processor_simple - INFO - Window time: 14:31:00 - 14:31:20
+2025-07-23 14:44:07,292 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:44:15,921 - quen_client - INFO - Received response from Quen: RM: The closing costs for refinancing can vary but typically include fees such as an application fee...
+2025-07-23 14:44:16,025 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 14:44:16,025 - stream_processor_simple - INFO - Window time: 14:31:05 - 14:31:25
+2025-07-23 14:44:16,025 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:44:29,945 - quen_client - INFO - Received response from Quen: RM: Great question! For the index fund, the expense ratio is typically around 0.15%, which is quite ...
+2025-07-23 14:44:30,465 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 14:44:30,466 - stream_processor_simple - INFO - Window time: 14:31:30 - 14:31:50
+2025-07-23 14:44:30,466 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:44:37,329 - quen_client - INFO - Received response from Quen: Rm: Great to hear you're ready to move forward! Let's get started with the application process right...
+2025-07-23 14:44:37,433 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 14:44:37,433 - stream_processor_simple - INFO - Window time: 14:31:35 - 14:31:55
+2025-07-23 14:44:37,433 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:44:43,252 - quen_client - INFO - Received response from Quen: RM: Additionally, it would be helpful if you could bring identification such as a driver’s license o...
+2025-07-23 14:44:43,775 - stream_processor_simple - INFO - Processing window for session abc123: 2 messages
+2025-07-23 14:44:43,775 - stream_processor_simple - INFO - Window time: 14:32:00 - 14:32:10
+2025-07-23 14:44:43,775 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 14:44:49,988 - quen_client - INFO - Received response from Quen: RM: Great to hear from you! Once you have all the documents ready, feel free to send them over and m...
+2025-07-23 14:44:49,988 - stream_processor_simple - INFO - Processing window for session def456: 2 messages
+2025-07-23 14:44:49,988 - stream_processor_simple - INFO - Window time: 14:32:05 - 14:32:15
+2025-07-23 14:44:49,988 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 14:44:55,313 - quen_client - INFO - Received response from Quen: RM: Great to hear that enthusiasm! How about we aim for next Wednesday at 3 PM? That way, we can div...
+2025-07-23 14:44:55,313 - stream_processor_simple - INFO - Streaming completed. Processed 28 messages.
+2025-07-23 16:17:26,886 - __main__ - INFO - ✅ Quen model is available via Ollama
+2025-07-23 16:17:26,887 - __main__ - INFO - Starting streaming pipeline...
+2025-07-23 16:17:26,887 - stream_processor_simple - INFO - Starting simplified streaming pipeline
+2025-07-23 16:17:26,888 - stream_processor_simple - INFO - Input file: messages.jsonl
+2025-07-23 16:17:26,888 - stream_processor_simple - INFO - Window size: 20 seconds
+2025-07-23 16:17:26,888 - stream_processor_simple - INFO - Speed factor: 5.0x
+2025-07-23 16:17:26,888 - stream_processor_simple - INFO - KeyBy: session_id (simulated)
+2025-07-23 16:17:26,888 - stream_processor_simple - INFO - Sink: Quen model via Ollama
+2025-07-23 16:17:27,302 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 16:17:27,303 - stream_processor_simple - INFO - Window time: 14:30:00 - 14:30:20
+2025-07-23 16:17:27,303 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 16:17:34,896 - quen_client - INFO - Received response from Quen: RM: Thanks for sharing that information. To give you the best advice, could you also tell me your cu...
+2025-07-23 16:17:35,001 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 16:17:35,001 - stream_processor_simple - INFO - Window time: 14:30:05 - 14:30:25
+2025-07-23 16:17:35,001 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 16:17:41,560 - quen_client - INFO - Received response from Quen: RM: Those are important goals! To better assist you, could we discuss your current investment portfo...
+2025-07-23 16:17:42,083 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 16:17:42,083 - stream_processor_simple - INFO - Window time: 14:30:30 - 14:30:50
+2025-07-23 16:17:42,083 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 16:17:49,488 - quen_client - INFO - Received response from Quen: RM: Great! Before we move forward with the details, it would be useful to know if there are any spec...
+2025-07-23 16:17:49,589 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 16:17:49,589 - stream_processor_simple - INFO - Window time: 14:30:35 - 14:30:55
+2025-07-23 16:17:49,589 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 16:17:56,580 - quen_client - INFO - Received response from Quen: Rm: Great! Knowing your comfort level with risk will help tailor the portfolio to meet both your fin...
+2025-07-23 16:17:57,097 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 16:17:57,097 - stream_processor_simple - INFO - Window time: 14:31:00 - 14:31:20
+2025-07-23 16:17:57,097 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 16:18:05,414 - quen_client - INFO - Received response from Quen: RM: The closing costs for refinancing typically include things like an application fee, appraisal fe...
+2025-07-23 16:18:05,520 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 16:18:05,520 - stream_processor_simple - INFO - Window time: 14:31:05 - 14:31:25
+2025-07-23 16:18:05,520 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 16:18:15,336 - quen_client - INFO - Received response from Quen: RM: Great question! For the broad market index fund, the annual fee is typically around 0.15%, and t...
+2025-07-23 16:18:15,847 - stream_processor_simple - INFO - Processing window for session abc123: 3 messages
+2025-07-23 16:18:15,848 - stream_processor_simple - INFO - Window time: 14:31:30 - 14:31:50
+2025-07-23 16:18:15,848 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 16:18:23,807 - quen_client - INFO - Received response from Quen: Rm: Great to hear that you're ready to move forward! Let's get started with your application right a...
+2025-07-23 16:18:23,913 - stream_processor_simple - INFO - Processing window for session def456: 3 messages
+2025-07-23 16:18:23,913 - stream_processor_simple - INFO - Window time: 14:31:35 - 14:31:55
+2025-07-23 16:18:23,913 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 16:18:30,516 - quen_client - INFO - Received response from Quen: RM: Additionally, it would be beneficial to have proof of identity such as a driver’s license or pas...
+2025-07-23 16:18:31,031 - stream_processor_simple - INFO - Processing window for session abc123: 2 messages
+2025-07-23 16:18:31,031 - stream_processor_simple - INFO - Window time: 14:32:00 - 14:32:10
+2025-07-23 16:18:31,031 - quen_client - INFO - Sending prompt to Quen for session abc123
+2025-07-23 16:18:36,591 - quen_client - INFO - Received response from Quen: RM: Great to hear that! Once you have all the documents ready, feel free to reach out if you need an...
+2025-07-23 16:18:36,592 - stream_processor_simple - INFO - Processing window for session def456: 2 messages
+2025-07-23 16:18:36,592 - stream_processor_simple - INFO - Window time: 14:32:05 - 14:32:15
+2025-07-23 16:18:36,592 - quen_client - INFO - Sending prompt to Quen for session def456
+2025-07-23 16:18:40,015 - quen_client - INFO - Received response from Quen: RM: Great to hear your enthusiasm! How does next Wednesday at 3 PM sound for us to dive into your fi...
+2025-07-23 16:18:40,016 - stream_processor_simple - INFO - Streaming completed. Processed 28 messages.
