@@ -41,6 +41,26 @@ class MessageEvent:
 
 
 @dataclass
+class StreamingChunk:
+    """Represents a chunk of streaming content."""
+    session_id: str
+    speaker: str
+    content: str
+    chunk_type: str  # "character", "word", or "sentence"
+    timestamp: datetime
+    
+    def to_dict(self):
+        """Convert to dictionary for JSON serialization."""
+        return {
+            'session_id': self.session_id,
+            'speaker': self.speaker,
+            'content': self.content,
+            'chunk_type': self.chunk_type,
+            'timestamp': self.timestamp.isoformat()
+        }
+
+
+@dataclass
 class CognitiveAnalysis:
     """Represents cognitive analysis of the conversation."""
     customer_intent: str

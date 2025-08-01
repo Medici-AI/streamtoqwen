@@ -1,0 +1,54 @@
+2025-07-29 09:55:11,625 - __main__ - INFO - 🔧 Initializing Quen client...
+2025-07-29 09:55:11,625 - quen_client - INFO - Sending prompt to Quen for session test
+2025-07-29 09:55:11,631 - quen_client - ERROR - Error communicating with Quen: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/generate (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106b38d90>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-07-29 09:55:11,631 - quen_client - WARNING - Using mock response for session test
+2025-07-29 09:55:11,631 - __main__ - INFO - ✅ Quen model is available via Ollama
+2025-07-29 09:55:11,632 - __main__ - INFO - 🔧 Initializing ElevenLabs stream processor...
+2025-07-29 09:55:11,632 - __main__ - INFO - 🚀 Starting ElevenLabs stream processor...
+2025-07-29 09:55:11,632 - __main__ - INFO - 📝 Instructions:
+2025-07-29 09:55:11,632 - __main__ - INFO -    1. The system will connect to ElevenLabs
+2025-07-29 09:55:11,632 - __main__ - INFO -    2. Start a conversation in ElevenLabs
+2025-07-29 09:55:11,632 - __main__ - INFO -    3. Speak naturally - the system will analyze in real-time
+2025-07-29 09:55:11,632 - __main__ - INFO -    4. Watch the console for window analysis and Quen advice
+2025-07-29 09:55:11,632 - __main__ - INFO -    5. Press Ctrl+C to stop
+2025-07-29 09:55:11,632 - elevenlabs_client - INFO - 🚀 Starting ElevenLabs stream processor...
+2025-07-29 09:55:12,178 - elevenlabs_client - ERROR - ❌ Failed to connect to ElevenLabs: BaseEventLoop.create_connection() got an unexpected keyword argument 'extra_headers'
+2025-07-29 09:55:12,178 - elevenlabs_client - ERROR - ❌ Failed to connect to ElevenLabs
+2025-07-29 09:55:12,178 - elevenlabs_client - INFO - 🛑 Stopping ElevenLabs stream processor...
+2025-07-29 09:55:12,178 - __main__ - INFO - 👋 ElevenLabs stream processor stopped
+2025-07-29 10:00:48,953 - __main__ - INFO - 🔧 Initializing Quen client...
+2025-07-29 10:00:48,954 - quen_client - INFO - Sending prompt to Quen for session test
+2025-07-29 10:01:18,965 - quen_client - ERROR - Error communicating with Quen: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=30)
+2025-07-29 10:01:18,966 - quen_client - WARNING - Using mock response for session test
+2025-07-29 10:01:18,966 - __main__ - INFO - ✅ Quen model is available via Ollama
+2025-07-29 10:01:18,966 - __main__ - INFO - 🔧 Initializing ElevenLabs stream processor...
+2025-07-29 10:01:18,966 - __main__ - INFO - 🚀 Starting ElevenLabs stream processor...
+2025-07-29 10:01:18,966 - __main__ - INFO - 📝 Instructions:
+2025-07-29 10:01:18,966 - __main__ - INFO -    1. The system will connect to ElevenLabs
+2025-07-29 10:01:18,966 - __main__ - INFO -    2. Start a conversation in ElevenLabs
+2025-07-29 10:01:18,966 - __main__ - INFO -    3. Speak naturally - the system will analyze in real-time
+2025-07-29 10:01:18,966 - __main__ - INFO -    4. Watch the console for window analysis and Quen advice
+2025-07-29 10:01:18,966 - __main__ - INFO -    5. Press Ctrl+C to stop
+2025-07-29 10:01:18,966 - elevenlabs_client - INFO - 🚀 Starting ElevenLabs stream processor...
+2025-07-29 10:01:23,692 - elevenlabs_client - ERROR - ❌ Failed to connect to ElevenLabs: server rejected WebSocket connection: HTTP 403
+2025-07-29 10:01:23,692 - elevenlabs_client - ERROR - ❌ Failed to connect to ElevenLabs
+2025-07-29 10:01:23,692 - elevenlabs_client - INFO - 🛑 Stopping ElevenLabs stream processor...
+2025-07-29 10:01:23,692 - __main__ - INFO - 👋 ElevenLabs stream processor stopped
+2025-07-29 10:09:41,088 - __main__ - INFO - 🔧 Initializing Quen client...
+2025-07-29 10:09:41,088 - quen_client - INFO - Sending prompt to Quen for session test
+2025-07-29 10:09:55,923 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: The current message is a test and does not contain any ...
+2025-07-29 10:09:55,923 - __main__ - INFO - ✅ Quen model is available via Ollama
+2025-07-29 10:09:55,923 - __main__ - INFO - 🔧 Initializing ElevenLabs stream processor...
+2025-07-29 10:09:55,923 - __main__ - INFO - 🚀 Starting ElevenLabs stream processor...
+2025-07-29 10:09:55,923 - __main__ - INFO - 📝 Instructions:
+2025-07-29 10:09:55,923 - __main__ - INFO -    1. The system will connect to ElevenLabs
+2025-07-29 10:09:55,923 - __main__ - INFO -    2. Start a conversation in ElevenLabs
+2025-07-29 10:09:55,923 - __main__ - INFO -    3. Speak naturally - the system will analyze in real-time
+2025-07-29 10:09:55,923 - __main__ - INFO -    4. Watch the console for window analysis and Quen advice
+2025-07-29 10:09:55,923 - __main__ - INFO -    5. Press Ctrl+C to stop
+2025-07-29 10:09:55,923 - elevenlabs_client - INFO - 🚀 Starting ElevenLabs stream processor...
+2025-07-29 10:09:56,223 - elevenlabs_client - ERROR - ❌ Failed to connect to ElevenLabs: server rejected WebSocket connection: HTTP 403
+2025-07-29 10:09:56,223 - elevenlabs_client - ERROR - ❌ Failed to connect to ElevenLabs
+2025-07-29 10:09:56,223 - elevenlabs_client - INFO - 🛑 Stopping ElevenLabs stream processor...
+2025-07-29 10:09:56,223 - __main__ - INFO - 👋 ElevenLabs stream processor stopped

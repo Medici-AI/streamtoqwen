@@ -6,6 +6,10 @@ colorama>=0.4.6
 # Data processing
 dataclasses-json>=0.6.0
 
+# ElevenLabs integration
+websockets>=11.0.0
+asyncio-mqtt>=0.16.0
+
 # Development dependencies (optional)
 pytest>=7.0.0
 black>=23.0.0

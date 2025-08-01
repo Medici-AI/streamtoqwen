@@ -1,0 +1,46 @@
+2025-07-29 10:04:56,866 - __main__ - INFO - 🔧 Initializing Quen client...
+2025-07-29 10:04:56,867 - quen_client - INFO - Sending prompt to Quen for session test
+2025-07-29 10:05:09,747 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: The current message appears to be a placeholder or test...
+2025-07-29 10:05:09,748 - __main__ - INFO - ✅ Quen model is available via Ollama
+2025-07-29 10:05:09,748 - __main__ - INFO - 🔧 Initializing ElevenLabs REST processor...
+2025-07-29 10:05:09,748 - __main__ - INFO - 🚀 Starting ElevenLabs REST processor...
+2025-07-29 10:05:09,748 - __main__ - INFO - 📝 Instructions:
+2025-07-29 10:05:09,748 - __main__ - INFO -    1. The system will test ElevenLabs API connection
+2025-07-29 10:05:09,748 - __main__ - INFO -    2. Start a simulated conversation for testing
+2025-07-29 10:05:09,748 - __main__ - INFO -    3. Watch the console for window analysis and Quen advice
+2025-07-29 10:05:09,748 - __main__ - INFO -    4. The conversation will simulate real-time streaming
+2025-07-29 10:05:09,748 - __main__ - INFO -    5. Press Ctrl+C to stop
+2025-07-29 10:05:09,748 - elevenlabs_rest_client - INFO - 🚀 Starting ElevenLabs REST processor...
+2025-07-29 10:05:10,137 - elevenlabs_rest_client - INFO - ✅ ElevenLabs API connection successful
+2025-07-29 10:05:10,139 - elevenlabs_rest_client - INFO - 🎭 Starting simulated conversation for testing...
+2025-07-29 10:05:10,139 - elevenlabs_rest_client - INFO - 🎤 Started conversation test_conv_001
+2025-07-29 10:05:10,139 - elevenlabs_rest_client - INFO - 💬 Sent message to conversation test_conv_001
+2025-07-29 10:05:13,140 - elevenlabs_rest_client - INFO - 💬 Sent message to conversation test_conv_001
+2025-07-29 10:05:16,141 - elevenlabs_rest_client - INFO - 💬 Sent message to conversation test_conv_001
+2025-07-29 10:05:19,143 - elevenlabs_rest_client - INFO - 💬 Sent message to conversation test_conv_001
+2025-07-29 10:05:22,144 - elevenlabs_rest_client - INFO - 💬 Sent message to conversation test_conv_001
+2025-07-29 10:05:25,997 - quen_client - INFO - Sending prompt to Quen for session test_conv_001
+2025-07-29 10:05:46,357 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: The RM should confirm the customer’s interest in pursui...
+2025-07-29 10:05:46,362 - elevenlabs_rest_client - INFO - 💬 Sent message to conversation test_conv_001
+2025-07-29 10:05:49,366 - quen_client - INFO - Sending prompt to Quen for session test_conv_001
+2025-07-29 10:06:08,749 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Proceed with preparing and presenting a detailed compar...
+2025-07-29 10:06:08,754 - elevenlabs_rest_client - INFO - 💬 Sent message to conversation test_conv_001
+2025-07-29 10:06:11,756 - quen_client - INFO - Sending prompt to Quen for session test_conv_001
+2025-07-29 10:06:32,283 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Highlight the long-term savings and benefits of refinan...
+2025-07-29 10:06:32,287 - elevenlabs_rest_client - INFO - 💬 Sent message to conversation test_conv_001
+2025-07-29 10:06:35,289 - quen_client - INFO - Sending prompt to Quen for session test_conv_001
+2025-07-29 10:06:55,203 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Provide a clear and transparent breakdown of closing co...
+2025-07-29 10:06:55,208 - elevenlabs_rest_client - INFO - 💬 Sent message to conversation test_conv_001
+2025-07-29 10:06:58,211 - quen_client - INFO - Sending prompt to Quen for session test_conv_001
+2025-07-29 10:07:16,671 - quen_client - INFO - Received response from Quen: {
+  "response": "Strategic advice to the RM: Highlight the long-term benefits of refinancing and dis...
+2025-07-29 10:07:16,675 - elevenlabs_rest_client - INFO - 💬 Sent message to conversation test_conv_001
+2025-07-29 10:07:19,676 - elevenlabs_rest_client - INFO - 🔚 Ended conversation test_conv_001
+2025-07-29 10:07:19,676 - elevenlabs_rest_client - INFO - 🎭 Simulated conversation completed
+2025-07-29 10:07:19,677 - elevenlabs_rest_client - INFO - 🛑 Stopping ElevenLabs REST processor...
+2025-07-29 10:07:19,677 - __main__ - INFO - 👋 ElevenLabs REST processor stopped
