@@ -4,7 +4,7 @@ trigger:
       - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: Default
 
 variables:
   ACR_NAME: rmdevacr30204
@@ -23,6 +23,16 @@ stages:
       - job: BuildDeploy
         displayName: Build and Deploy
         steps:
+          - script: |
+              set -euo pipefail
+              apt-get update -y
+              apt-get install -y curl ca-certificates gnupg lsb-release apt-transport-https
+              curl -sL https://aka.ms/InstallAzureCLIDeb | bash
+              curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+              KVER=$(curl -L -s https://dl.k8s.io/release/stable.txt)
+              curl -L -o /usr/local/bin/kubectl https://dl.k8s.io/release/$KVER/bin/linux/amd64/kubectl
+              chmod +x /usr/local/bin/kubectl
+            displayName: Install CLI tools (az, helm, kubectl)
           - task: AzureKeyVault@2
             displayName: Fetch secrets from Key Vault
             inputs:
