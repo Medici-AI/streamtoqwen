@@ -1,0 +1,11 @@
+# Local environment files
+.env
+*.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Virtual envs
+venv/
+.envrc

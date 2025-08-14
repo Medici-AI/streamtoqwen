@@ -1,0 +1,32 @@
+image:
+  repository: acrllmdev.azurecr.io/streamllm
+  tag: latest
+  pullPolicy: IfNotPresent
+
+replicaCount: 2
+
+resources:
+  requests:
+    cpu: 200m
+    memory: 256Mi
+  limits:
+    cpu: 1
+    memory: 1Gi
+
+env:
+  OPENAI_EMBEDDING_MODEL: text-embedding-3-large
+  AZURE_SERVICE_BUS_TOPIC: rm-events
+  AZURE_SERVICE_BUS_SUB: reasoner-workers
+  REDIS_URL: ""
+
+# These should be mapped from secrets in AKS (e.g., pulled from Key Vault)
+secretEnv:
+  - name: OPENAI_API_KEY
+    key: OPENAI--API--KEY
+  - name: PINECONE_API_KEY
+    key: PINECONE--API--KEY
+  - name: AZURE_SERVICE_BUS_CONNECTION
+    key: AZURE--SERVICE--BUS--CONNECTION
+  - name: AZURE_COSMOS_CONNECTION
+    key: AZURE--COSMOS--CONNECTION
+

@@ -209,3 +209,30 @@ For support and questions:
 ---
 
 **Made with ❤️ by IntelMe.AI** 
+
+## Local .env configuration (MVP)
+
+For local runs, create a `.env` file at the project root (excluded from git) and set:
+
+```
+OPENAI_API_KEY=your-openai-key
+OPENAI_EMBEDDING_MODEL=text-embedding-3-large
+PINECONE_API_KEY=your-pinecone-key
+# Optional Azure settings
+AZURE_SERVICE_BUS_CONNECTION=...
+AZURE_SERVICE_BUS_TOPIC=rm-events
+AZURE_SERVICE_BUS_SUB=reasoner-workers
+```
+
+Start the API:
+
+```
+source .env
+bash scripts/run_api.sh
+```
+
+Hit endpoints:
+- POST `http://localhost:8000/ingest/event`
+- POST `http://localhost:8000/ingest/flush/{session_id}`
+- POST `http://localhost:8000/analyze/window`
+- POST `http://localhost:8000/rm-copy/update` 

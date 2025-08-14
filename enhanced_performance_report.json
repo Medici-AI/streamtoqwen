@@ -1,0 +1,110 @@
+{
+  "test_results": {
+    "single_rm": {
+      "processing_time": 1.118,
+      "input_tokens": 118,
+      "output_tokens": 200,
+      "token_metrics": "TokenMetrics(input_tokens=118, output_tokens=200, total_tokens=318, tokens_per_second=284.4364937388193, input_tokens_per_second=105.54561717352414, output_tokens_per_second=178.89087656529514, token_efficiency=1.694915254237288, ttft=335.40000000000003, tpot=5.590000000000001)",
+      "gpu_utilization": 85.0,
+      "memory_utilization": 20.0,
+      "ttft": 335.40000000000003,
+      "tpot": 5.590000000000001,
+      "tps": 284.4364937388193,
+      "otps": 178.89087656529514
+    },
+    "concurrent_rms": {
+      "total_processing_time": 4.224,
+      "concurrent_sessions": 4,
+      "average_time_per_session": 1.056,
+      "total_input_tokens": 224,
+      "total_output_tokens": 800,
+      "token_metrics": "TokenMetrics(input_tokens=224, output_tokens=800, total_tokens=1024, tokens_per_second=242.4242424242424, input_tokens_per_second=53.03030303030303, output_tokens_per_second=189.39393939393938, token_efficiency=3.5714285714285716, ttft=1267.2, tpot=5.28)",
+      "gpu_utilization": 92.0,
+      "memory_utilization": 22.0
+    },
+    "sustained_load": {
+      "duration": 60,
+      "sessions_processed": 60,
+      "average_processing_time": 1.0720000000000012,
+      "throughput": 60.0,
+      "total_input_tokens": 4320,
+      "total_output_tokens": 12000,
+      "token_metrics": "TokenMetrics(input_tokens=4320, output_tokens=12000, total_tokens=16320, tokens_per_second=253.73134328358185, input_tokens_per_second=67.16417910447754, output_tokens_per_second=186.56716417910428, token_efficiency=2.7777777777777777, ttft=19296.00000000002, tpot=5.360000000000006)",
+      "gpu_utilization": 88.0,
+      "memory_utilization": 21.0
+    },
+    "token_efficiency": {
+      "short_conversation": {
+        "input_tokens": 6,
+        "output_tokens": 200,
+        "token_efficiency": 33.333333333333336,
+        "processing_time": 1.006,
+        "tps": 204.7713717693837
+      },
+      "medium_conversation": {
+        "input_tokens": 17,
+        "output_tokens": 200,
+        "token_efficiency": 11.764705882352942,
+        "processing_time": 1.0170000000000001,
+        "tps": 213.3726647000983
+      },
+      "long_conversation": {
+        "input_tokens": 38,
+        "output_tokens": 200,
+        "token_efficiency": 5.2631578947368425,
+        "processing_time": 1.038,
+        "tps": 229.28709055876686
+      }
+    }
+  },
+  "performance_summary": {
+    "total_input_tokens": 4662,
+    "total_output_tokens": 13000,
+    "overall_token_efficiency": 2.7885027885027887,
+    "total_processing_time": 69.66200000000006,
+    "average_tokens_per_second": 253.5385145416437,
+    "sustained_throughput": 60.0,
+    "average_gpu_utilization": 88.33333333333333,
+    "average_memory_utilization": 21.0
+  },
+  "token_analysis": {
+    "input_token_distribution": {
+      "single_rm": 118,
+      "concurrent_rms": 224,
+      "sustained_load": 4320
+    },
+    "output_token_distribution": {
+      "single_rm": 200,
+      "concurrent_rms": 800,
+      "sustained_load": 12000
+    },
+    "token_efficiency_by_scenario": {
+      "short_conversation": {
+        "input_tokens": 6,
+        "output_tokens": 200,
+        "token_efficiency": 33.333333333333336,
+        "processing_time": 1.006,
+        "tps": 204.7713717693837
+      },
+      "medium_conversation": {
+        "input_tokens": 17,
+        "output_tokens": 200,
+        "token_efficiency": 11.764705882352942,
+        "processing_time": 1.0170000000000001,
+        "tps": 213.3726647000983
+      },
+      "long_conversation": {
+        "input_tokens": 38,
+        "output_tokens": 200,
+        "token_efficiency": 5.2631578947368425,
+        "processing_time": 1.038,
+        "tps": 229.28709055876686
+      }
+    }
+  },
+  "recommendations": [
+    "Output tokens are very efficient - consider reducing response length",
+    "Token processing speed is excellent"
+  ],
+  "timestamp": 1754463712.959275
+}

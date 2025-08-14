@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streamllm
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: streamllm
+  template:
+    metadata:
+      labels:
+        app: streamllm
+    spec:
+      containers:
+        - name: streamllm
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 8000
+          env:
+            - name: OPENAI_EMBEDDING_MODEL
+              value: {{ .Values.env.OPENAI_EMBEDDING_MODEL | quote }}
+            - name: AZURE_SERVICE_BUS_TOPIC
+              value: {{ .Values.env.AZURE_SERVICE_BUS_TOPIC | quote }}
+            - name: AZURE_SERVICE_BUS_SUB
+              value: {{ .Values.env.AZURE_SERVICE_BUS_SUB | quote }}
+            - name: REDIS_URL
+              valueFrom:
+                secretKeyRef:
+                  name: streamllm-secrets
+                  key: REDIS--URL
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: streamllm-secrets
+                  key: {{ (index .Values.secretEnv 0).key }}
+            - name: PINECONE_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: streamllm-secrets
+                  key: {{ (index .Values.secretEnv 1).key }}
+            - name: AZURE_SERVICE_BUS_CONNECTION
+              valueFrom:
+                secretKeyRef:
+                  name: streamllm-secrets
+                  key: {{ (index .Values.secretEnv 2).key }}
+            - name: AZURE_COSMOS_CONNECTION
+              valueFrom:
+                secretKeyRef:
+                  name: streamllm-secrets
+                  key: {{ (index .Values.secretEnv 3).key }}
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+

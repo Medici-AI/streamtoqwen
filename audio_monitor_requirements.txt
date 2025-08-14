@@ -1,0 +1,39 @@
+# ElevenLabs Audio Monitor Requirements
+# Dependencies for real-time audio monitoring with multi-GPU system
+
+# Core audio processing
+pyaudio>=0.2.11
+wave>=0.0.2
+numpy>=1.24.0
+
+# WebSocket and HTTP communication
+websockets>=11.0.0
+aiohttp>=3.8.0
+requests>=2.31.0
+
+# Rich console output
+rich>=13.0.0
+colorama>=0.4.6
+
+# Multi-GPU system dependencies
+torch>=2.0.0
+GPUtil>=1.4.0
+psutil>=5.9.0
+
+# Async and concurrent processing
+asyncio-mqtt>=0.16.0
+
+# Data processing
+dataclasses-json>=0.6.0
+pydantic>=2.0.0
+
+# Logging and monitoring
+structlog>=23.0.0
+
+# Development and testing
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+
+# Optional: Audio enhancement
+# librosa>=0.10.0  # For advanced audio processing
+# soundfile>=0.12.0  # For additional audio formats 
