@@ -17,64 +17,77 @@ variables:
   IMAGE_NAME: streamllm
 
 stages:
+  - stage: Test
+    displayName: Run unit tests
+    jobs:
+      - job: PyTests
+        displayName: Python tests (pytest)
+        steps:
+          - script: |
+              set -euo pipefail
+              python3 --version || true
+              python3 -m pip install --upgrade pip
+              python3 -m pip install -r requirements_mvp.txt
+              python3 -m pip install pytest
+              pytest -q tests
+            displayName: Install deps and run pytest
   - stage: BuildAndDeploy
     displayName: Build image and deploy to AKS
+    dependsOn: Test
+    condition: succeeded()
     jobs:
       - job: BuildDeploy
         displayName: Build and Deploy
         steps:
           - script: |
               set -euo pipefail
-              apt-get update -y
-              apt-get install -y curl ca-certificates gnupg lsb-release apt-transport-https
-              curl -sL https://aka.ms/InstallAzureCLIDeb | bash
-              curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
-              KVER=$(curl -L -s https://dl.k8s.io/release/stable.txt)
-              curl -L -o /usr/local/bin/kubectl https://dl.k8s.io/release/$KVER/bin/linux/amd64/kubectl
-              chmod +x /usr/local/bin/kubectl
+              # macOS self-hosted agent: ensure Homebrew and CLI tools
+              if ! command -v brew >/dev/null 2>&1; then
+                echo "Installing Homebrew..."
+                /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+                echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.bash_profile || true
+                echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile || true
+                eval "$($(which brew || echo /opt/homebrew/bin/brew) shellenv)"
+              else
+                eval "$($(which brew || echo /opt/homebrew/bin/brew) shellenv)"
+              fi
+              brew update
+              brew install -q azure-cli helm kubernetes-cli || true
+              # Ensure az/helm/kubectl available in PATH
+              which az && az version || true
+              which helm && helm version || true
+              which kubectl && kubectl version --client || true
             displayName: Install CLI tools (az, helm, kubectl)
-          - task: AzureKeyVault@2
-            displayName: Fetch secrets from Key Vault
-            inputs:
-              azureSubscription: az-sub-rmdev1
-              KeyVaultName: $(KV_NAME)
-              SecretsFilter: |
-                OPENAI--API--KEY
-                PINECONE--API--KEY
-                AZURE--SERVICE--BUS--CONNECTION
-                AZURE--COSMOS--CONNECTION
-                REDIS--URL
-
           - task: AzureCLI@2
-            displayName: Build image in ACR and deploy with Helm
+            displayName: Fetch secrets via Azure CLI and build/deploy
             inputs:
               azureSubscription: az-sub-rmdev1
               scriptType: bash
               scriptLocation: inlineScript
               inlineScript: |
                 set -euo pipefail
-                # Resolve ACR login server
+                echo "Reading secrets from Key Vault $(KV_NAME) via az..."
+                OPENAI_VAR=$(az keyvault secret show --vault-name $(KV_NAME) -n OPENAI--API--KEY --query value -o tsv || echo "")
+                PINECONE_VAR=$(az keyvault secret show --vault-name $(KV_NAME) -n PINECONE--API--KEY --query value -o tsv || echo "")
+                SB_VAR=$(az keyvault secret show --vault-name $(KV_NAME) -n AZURE--SERVICE--BUS--CONNECTION --query value -o tsv || echo "")
+                COSMOS_VAR=$(az keyvault secret show --vault-name $(KV_NAME) -n AZURE--COSMOS--CONNECTION --query value -o tsv || echo "")
+                REDIS_VAR=$(az keyvault secret show --vault-name $(KV_NAME) -n REDIS--URL --query value -o tsv || echo "")
+
+                echo "Resolve ACR login server..."
                 ACR_LOGIN=$(az acr show -n $(ACR_NAME) --query loginServer -o tsv)
                 IMG_TAG=${BUILD_SOURCEVERSION:0:7}
                 IMG=$ACR_LOGIN/$(IMAGE_NAME):$IMG_TAG
 
-                echo "Building $IMG in ACR..."
+                echo "ACR build: $IMG"
                 az acr build -r $(ACR_NAME) -t $IMG .
 
-                echo "Fetching AKS credentials..."
+                echo "Get AKS credentials..."
                 az aks get-credentials -g $(RG_NAME) -n $(AKS_NAME) --overwrite-existing
 
-                echo "Ensuring namespace $(NAMESPACE) exists..."
+                echo "Ensure namespace $(NAMESPACE) exists..."
                 kubectl create namespace $(NAMESPACE) --dry-run=client -o yaml | kubectl apply -f -
 
-                echo "Syncing k8s secret from Key Vault variables..."
-                # KeyVault task maps dashes to underscores in variable names
-                OPENAI_VAR=${OPENAI__API__KEY:-}
-                PINECONE_VAR=${PINECONE__API__KEY:-}
-                SB_VAR=${AZURE__SERVICE__BUS__CONNECTION:-}
-                COSMOS_VAR=${AZURE__COSMOS__CONNECTION:-}
-                REDIS_VAR=${REDIS__URL:-}
-
+                echo "Sync k8s secret..."
                 kubectl -n $(NAMESPACE) delete secret streamllm-secrets --ignore-not-found
                 kubectl -n $(NAMESPACE) create secret generic streamllm-secrets \
                   --from-literal=OPENAI--API--KEY="$OPENAI_VAR" \
@@ -88,9 +101,10 @@ stages:
                   --namespace $(NAMESPACE) \
                   --set image.repository=$ACR_LOGIN/$(IMAGE_NAME) \
                   --set image.tag=$IMG_TAG \
+                  --atomic --wait --timeout 5m \
                   -f $(CHART_PATH)/values-dev.yaml
 
-                echo "Waiting for rollout..."
+                echo "Wait for rollout..."
                 kubectl -n $(NAMESPACE) rollout status deploy/$(CHART_RELEASE) --timeout=300s
 
 
